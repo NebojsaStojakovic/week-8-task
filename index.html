@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <title>Video Player</title>
+</head>
+
+<body>
+    <div class="blur"></div>
+    <div class="container">
+        <h1 class="video__title">VIDEOPLAYER</h1>
+        <div class="video__container">
+            <div class="video__play-overlay"><i class="fas fa-play"></i></div>
+            <video controls class="video" id="video" preload="metadata" poster="thumbnail.png">
+                <source src="./Carousel - 5317.mp4" type="video/mp4">
+                </source>
+            </video>
+            <div class="video__controls">
+                <div class="video__progress">
+                    <input class="video__progress-bar" id="seek" value="0" min="0" type="range" step="1">
+                </div>
+                <div class="video__seek">
+                    <div class="seek-start">00:00</div>
+                    <div class="seek-end">04:00</div>
+                </div>
+                <div class="video__buttons">
+                    <select data-title="VideoSpeed" class="video__speed" name="videoSpeed" id="videoSpeed">
+                        <option value="0.5">0.5x</option>
+                        <option value="0.75">0.75x</option>
+                        <option value="1" selected>1.0x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="2.0">2.0x</option>
+                    </select>
+                    <div class="volume__container">
+                        <button data-title="Mute" class="video__volume">
+                            <i class="fas fa-volume-up"></i>
+                            <i class="fas fa-volume-mute"></i>
+                        </button>
+                        <input type="range" id="progress-volume" class="volume__progress" min="0" max="1" step="0.1"
+                            value="1" />
+                    </div>
+                    <button data-title="Skip -10s" class="video__back">
+                        <i class="fas fa-undo"></i>
+                    </button>
+                    <button data-title="Play" class="video__play">
+                        <i class="fas fa-play"></i>
+                        <i class="fas fa-pause"></i>
+                    </button>
+                    <button data-title="Skip +10s" class="video__forward">
+                        <i class="fas fa-redo"></i>
+                    </button>
+                    <button data-title="Stop" class="video__stop">
+                        <i class="fas fa-stop"></i>
+                    </button>
+                    <button data-title="Full Screen" class="video__fullscreen">
+                        <i class="fas fa-expand"></i>
+                        <i class="fas fa-compress"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/bf103bd416.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
